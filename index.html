@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Card</title>
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+
+            <img src="images/headphone.webp" alt="" id="frontImg">
+            <img src="images/headphone3.webp" alt="" id="backImg">
+
+
+            <div class="product-inner" id="productBox">
+                <div class="product-front">
+                    <div class="product-top">
+                        <h1>Boat</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>Boat Headphones</p>
+                        <h2>Rockerz 550</h2>
+                        <h1> <span> &#8360;.</span> 1999</h1>
+                        <button type="button" class="">Add To Bag</button>
+                        <div class="color-select">
+                            <div class="select-item">
+                                <img src="images/headphone.webp" alt="">
+                            </div>
+                            <div class="select-item">
+                                <img src="images/headphone3.webp" alt="" onclick="flipRight()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-back">
+                    <div class="product-top product-top2">
+                        <h1>Boat</h1>
+                    </div>
+                    <div class="product-bottom product-bottom2">
+                        <p>Boat Headphones</p>
+                        <h2>Rockerz 550</h2>
+                        <h1> <span> &#8360;.</span> 1999</h1>
+                        <button type="button" class="">Add To Bag</button>
+                        <div class="color-select">
+                            <div class="select-item select-item2">
+                                <img src="images/headphone.webp" alt="" onclick="flipLeft()">
+                            </div>
+                            <div class="select-item select-item2">
+                                <img src="images/headphone3.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-side"></div>
+                <div class="right-side"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var productBox = document.getElementById("productBox");
+
+        var frontImg = document.getElementById("frontImg");
+
+        var backImg = document.getElementById("backImg");
+
+        function flipRight() {
+            productBox.style.transform = "rotateY(180deg)";
+            frontImg.style.left = "650px";
+            backImg.style.left = "20px";
+            frontImg.style.transform = "rotate(-360deg)";
+            backImg.style.transform = "rotate(0deg)";
+        }
+
+        function flipLeft() {
+            productBox.style.transform = "rotateY(0deg)";
+            frontImg.style.left = "20px";
+            backImg.style.left = "-650px";
+            frontImg.style.transform = "rotate(0deg)";
+            backImg.style.transform = "rotate(-360deg)";
+        }
+
+    </script>
+</body>
+</html>
